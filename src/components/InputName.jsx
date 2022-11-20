@@ -38,11 +38,14 @@ const dispatch = useDispatch();
              <img className='img-trainner' src={TrainnerImg} alt="" />
              <img className='ImgText' src={ImgText} alt="" />
           </div>
-           <h2 style={{position:"initial"}} className='welcome' >give me your name to start</h2>
+          
            <img className={`running-Pikachu ${ runningPika ? " ": "running-right"}`} src={RunningPikachu} alt="" />
            <img className='charizard' src={Charizard} alt="" />
            <img className='rocks' src={Rocks}alt="" />
            <img className='treeGif' src={treeGif} alt="" />
+           <div className='input-type'>
+
+               <h2 style={{position:"initial"}} className='welcome three' >give me your name to start</h2>
             <input className='inputWrite' 
             type="text" 
             placeholder='Enter name'
@@ -50,6 +53,8 @@ const dispatch = useDispatch();
             value={userName}
             />
             <button className='buttonName' onClick={enterName}><b>go!</b></button>
+           </div>
+        
 
         </div>
       </div>
