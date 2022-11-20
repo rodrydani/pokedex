@@ -269,7 +269,7 @@ body{
     gap: 5rem;
 }
 
-@media (max-width: 350px){
+@media (max-width: 500px){
     
     .inputName{
         text-align: center;
@@ -315,26 +315,27 @@ body{
         right: 20px; 
     }
   .input-type{
-    margin-bottom: 2rem;
+    position: relative;
+    bottom: 300px;
   }
     .running-Pikachu{
-        position: absolute;
+        position: relative;
         width: 100px;
         bottom: 4%;
        animation-name:run ;
-       animation-duration: 6s;
+       animation-duration: 4s;
        animation-fill-mode: both;
        animation-iteration-count: infinite;
        z-index: 100;
        overflow: hidden;
     }
     @keyframes run {
-        from{transform: translateX(-100%)}
-        to{transform: translateX(120%)}
+        from{transform: translateX(-200px)}
+        to{transform: translateX(200px)}
     }
     .charizard{
-        position: absolute;
-        bottom: 50%;
+        position: relative;
+        bottom: 500px;
         width: 200px;
         animation-name:fly;
         animation-duration: 7s;
@@ -345,8 +346,8 @@ body{
     }
     
     @keyframes fly {
-        from{transform: translateX(100%)  translatey(30%)}
-        to{transform: translateX(-100%)  translatey(0%)}
+        from{transform: translateX(300px)  translatey(100px)}
+        to{transform: translateX(-200px)  translatey(-100px)}
     }
     
     .treeGif{
