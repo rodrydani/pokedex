@@ -7,9 +7,7 @@
 body{
   overflow-x: hidden;
   font-family: 'Pokemon Solid', sans-serif;
-  background-image: url("./assets/background-input.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+
 }
 /* *****************INPUT NAME********************* */
 .loadImf{
@@ -17,104 +15,107 @@ body{
     height: 100%;
     width: 100%;
 }
-.inputName{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
- 
- 
-}
-.pokeLogo{
-    position: absolute;
-    width: 400px;
-    left: 35%;
-    top: 10px;
-    z-index: 100;
-}
 .background-Input{
-    position: absolute;
+    
     background-image: url("./assets/background-input.png");
     background-size: cover;
    width: 100%;
    height: 100%;
   
 }
-.img-trainner{
-    position: relative;
-   left: 50%;
-   width: 300px;
-   z-index: 100;
+.inputName{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+ 
+ 
 }
-.welcome{
-    position: relative;
-    font-size: 1.2rem;
-    right: 30%;
-    top: 180px;
-    color: white;
-    -webkit-text-stroke: .5px rgb(81, 76, 76);
-    z-index: 100;
-}
-.two{
-    top: 20%;
-    top: 190px;
-    right: 20%;
-    z-index: 100;
-    
-}
-.ImgText{
+.text-conteiner{
     position: relative;
     width: 400px;
     height: 200px;
-    right: 40%;
-    bottom: 50px;
-    transition: 7s;
-    z-index: 100;
-    
+    text-align: center;
+  
 }
-.running-Pikachu{
+.ImgText{
+    object-fit:contain;
+    width: 100%;
+    height: 100%; 
+    z-index: 100;
+}
+.welcome{
+   font-size: 1.2rem;
+    color: white;
+    -webkit-text-stroke: .5px rgb(81, 76, 76); 
+}
+
+.welcome-text{
+    text-align: start;
     position: absolute;
+    bottom: 25%;
+    left: 20%;
+   
+}
+
+.pokeLogo{
+  
+    width: 400px;
+    z-index: 100;
+}
+
+.img-trainner{
+  
+   left: 50%;
+   width: 300px;
+   z-index: 300;
+}
+
+
+.running-Pikachu{
+  position: relative;
     width: 200px;
     bottom: 4%;
    animation-name:run ;
-   animation-duration: 8s;
+   animation-duration: 6s;
    animation-fill-mode: both;
    animation-iteration-count: infinite;
    z-index: 100;
 }
 @keyframes run {
-    from{transform: translateX(-1000px)}
-    to{transform: translateX(1000px)}
+    from{transform: translateX(-100%)}
+    to{transform: translateX(750%)}
 }
 .charizard{
-    position: absolute;
+  position: absolute;
     bottom: 50%;
     width: 400px;
     animation-name:fly;
     animation-duration: 10s;
-    animation-fill-mode: both;
+    animation-fill-mode:forwards;
     animation-iteration-count: infinite;
-    z-index: 0;
+    animation-delay: 3s;
+    z-index: 200;
 }
 
 @keyframes fly {
-    from{transform: translateX(1000px)  translatey(200px)}
-    to{transform: translateX(-1000px)  translatey(-200px)}
+    from{transform: translateX(750px)  translatey(250px)}
+    to{transform: translateX(-750px)  translatey(-250px)}
 }
 
 .treeGif{
-    position: absolute;
+   position: absolute;
     width: 400px;
    bottom: 40px;
-   left: 60%;
+   left: 70%;
 }
 .rocks{
-    position: absolute;
+   position: absolute;
     width: 300px;
    bottom: 4%;
-   left: 20%;
+  left: 3px;
 }
 .inputWrite{
     height: 30px;
@@ -272,77 +273,34 @@ body{
 @media (max-width: 500px){
     
     .inputName{
-        text-align: center;
-        display: flex;
+   
+    }
+    .text-img-cont{
         flex-direction: column;
-        justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
-      overflow-y: hidden;
-     
     }
     .pokeLogo{
-        width: 100px;
-        left: 10%;
-        top: 10px;  
+      width: 100px;
     }
-    .background-Input{
-        position: absolute;
-        background-image: url("./assets/background-input.png");
-        background-size: cover;
-       width: 100%;
-       height: 100%;
+  
+    .img-trainner{
+        padding-left: 3rem;
+        margin-left: 2rem;
+    }
+   
+  
+    .running-Pikachu{
+        width: 150px;
+        animation-duration: 6s;
       
     }
-    .img-trainner{ 
-       left: 5px;
-       width: 200px;
-       bottom: 70px;
-    }
-    .welcome{
-        font-size: 1rem;
-        right: 20px;
-        top: 280px;
-        color: white;   
-    }
-    .two{ 
-        top: 300px;
-        right: 20px;   
-    }
-    .ImgText{
-        width: 280px;
-        height: 200px;
-        right: 20px; 
-    }
-  .input-type{
-    position: relative;
-    bottom: 300px;
-  }
-    .running-Pikachu{
-        position: relative;
-        width: 100px;
-        bottom: 4%;
-       animation-name:run ;
-       animation-duration: 4s;
-       animation-fill-mode: both;
-       animation-iteration-count: infinite;
-       z-index: 100;
-       overflow: hidden;
-    }
     @keyframes run {
-        from{transform: translateX(-200px)}
-        to{transform: translateX(200px)}
+        from{transform: translateX(-100px)}
+        to{transform: translateX(500px)}
     }
     .charizard{
-        position: relative;
-        bottom: 500px;
         width: 200px;
-        animation-name:fly;
-        animation-duration: 7s;
-        animation-fill-mode: both;
-        animation-iteration-count: infinite;
-        z-index: 0;
-        overflow: hidden;
+        animation-duration: 5s;
+      
     }
     
     @keyframes fly {
@@ -351,42 +309,12 @@ body{
     }
     
     .treeGif{
-        position: absolute;
-        width: 200px;
-       bottom: 150px;
-       left: 18%;
-       
+      width:200px;
+       bottom: 7rem;
+      
     }
     .rocks{
       
-        width:200px;
-       bottom: 130px;
-       left: 20px;
+     width: 120px;
     }
-    .inputWrite{
-        height: 30px;
-        border-radius: 5px;
-        margin-top: 1rem;
-        font-size: 1rem;
-        box-shadow: 0px 0px 20px gray;
-    }
-    .buttonName{
-        margin-top: 1rem;
-        font-size: 1.5rem;
-        color: white;
-        background-color: red;
-        width: 50px;
-        height: 50px;
-        border: 1px solid black;
-        border-radius: 100%;
-        transform: translateX(4px) translateY(4px);
-        box-shadow: 0px 0px 5px black;
-        transition: 1s;
-    }
-    .buttonName:hover{
-        box-shadow: 5px 5px 10px black;
-        transition: 1s;
-      transform: translateX(-4px) translateY(-4px);
-    }
-
 }

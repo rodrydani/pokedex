@@ -30,33 +30,41 @@ const dispatch = useDispatch();
     return (
       <>
       <div className='background-Input'>
-           <img className='pokeLogo' src={pokeLogo} alt="" />
+          
            <div className='inputName'>
-          <div >
+           <img className='pokeLogo' src={pokeLogo} alt="" />
+           <div className='text-img-cont' style={{display:"flex"}}>
+               <img className='img-trainner' src={TrainnerImg} alt="" />
+             <div className='text-conteiner' >
+          <img className='ImgText' src={ImgText} alt="" />
+          <div className='welcome-text'>
             <h2 className='welcome'>Hello rookie!</h2>
             <h3 className='welcome two'>Welcome to pokemon world!</h3>
-             <img className='img-trainner' src={TrainnerImg} alt="" />
-             <img className='ImgText' src={ImgText} alt="" />
           </div>
-          
-           <img className={`running-Pikachu ${ runningPika ? " ": "running-right"}`} src={RunningPikachu} alt="" />
-           <img className='charizard' src={Charizard} alt="" />
+           </div> 
+        
+          </div>
+          <img className='charizard' src={Charizard} alt="" />
+          <div className='input-type'>
+
+          <h2 style={{position:"initial"}} className='welcome three' >give me your name to start</h2>
+          <input className='inputWrite' 
+           type="text" 
+           placeholder='Enter name'
+           onChange={(e)=>setPokeName(e.target.value)}
+           value={userName}
+            />
+         <button className='buttonName' onClick={enterName}><b>go!</b></button>
+           </div>
            <img className='rocks' src={Rocks}alt="" />
            <img className='treeGif' src={treeGif} alt="" />
-           <div className='input-type'>
-
-               <h2 style={{position:"initial"}} className='welcome three' >give me your name to start</h2>
-            <input className='inputWrite' 
-            type="text" 
-            placeholder='Enter name'
-            onChange={(e)=>setPokeName(e.target.value)}
-            value={userName}
-            />
-            <button className='buttonName' onClick={enterName}><b>go!</b></button>
-           </div>
-        
-
         </div>
+         <img className={`running-Pikachu ${ runningPika ? " ": "running-right"}`} src={RunningPikachu} alt="" />
+        
+          {/*  
+          
+           <img className='treeGif' src={treeGif} alt="" />
+           */}
       </div>
      
         
