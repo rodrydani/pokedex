@@ -7,7 +7,7 @@ import axios from "axios";
 import PokemonCard from './PokemonCard';
 import { useNavigate } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
-import pikachuLoad from "../assets/my-ezvid-video.gif";
+import loadImf from "../assets/simple_pokeball.gif";
 const Pokemons = () => {
 
     const userName=useSelector(state=>state.name)
@@ -64,20 +64,22 @@ const Pokemons = () => {
       { 
       loading ?
       <div>
-        <img className='pokeBallLoad' src={pikachuLoad} alt="" />
+        <img className='pokeBallLoad' src={loadImf} alt="" />
       </div>
       :
      
        
         <div className='pokemons-conteiner'>
+           <h2 className='welcome-name'>Welcome!{" "}{userName}!</h2>
          <div className='pokemon-top'>
-            <h2 className='welcome-name'>Welcome!{" "}{userName}!</h2>
+           
+        
         <input className='seach-pokemon'
          type="text" 
          placeholder='seach pokemon' 
          onChange={(e)=>setPokemonName(e.target.value)}
          /> 
-        <button className='button-seach' onClick={seachPokemon}>seach</button>
+      <button className='button-seach' onClick={seachPokemon}>seach</button>
         <select className='select-type' onChange={filterType} name="" id="">
          {pokemonTipes.map((type)=>(
           <option className='option-tipe' value={type.url} key={type.name}>{type.name}</option>
@@ -92,14 +94,16 @@ const Pokemons = () => {
          pageCount={totalPages}
          
          marginPagesDisplayed={5}
-         previousLabel={ <button 
+         previousLabel={ <button
+          className='button-last-past' 
           onClick={()=>setPage(page-1)}
           disabled={page===1}
-          >lastPage</button>}
+          >last Page</button>}
           nextLabel={ <button 
+            className='button-last-past' 
            disabled={page===totalPages}
           onClick={()=>setPage(page+1)}
-           >NextPage</button>}
+           >Next Page</button>}
            onPageChange ={handlePageClick}
         />
         </div>
